@@ -1,8 +1,8 @@
+import { Role } from "../db/schemas";
 import { EdarErr } from "../errors/EdarErr";
 import { Middleware } from "../types";
 
-// recuerda tipar el role
-export const verifyRole = (role: any): Middleware => {
+export const verifyRole = (role: Role): Middleware => {
   return (_req, res, next) => {
     try {
       const userRole = res.locals?.tokenPayload?.role;
