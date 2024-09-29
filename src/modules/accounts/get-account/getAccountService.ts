@@ -17,8 +17,7 @@ export const getAccountService = async (id: UUID) => {
     })
     .from(accounts)
     .leftJoin(contacts, eq(accounts.id, contacts.accountId))
-    .where(eq(accounts.id, id))
-    .limit(1);
+    .where(eq(accounts.id, id));
 
   if (!account) throw new EdarErr({ status: 404, msg: "Cuenta no encontrada" });
 
