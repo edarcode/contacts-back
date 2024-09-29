@@ -25,7 +25,7 @@ export const contacts = sqliteTable("contacts", {
     .$defaultFn(() => crypto.randomUUID()),
   name: text("name").notNull(),
   img: text("img").unique(),
-  tell: text("tell", { length: 25 }).notNull(),
+  tell: text("tell", { length: 25 }).unique().notNull(),
   createdAt: text("created_at").default(sql`(CURRENT_TIMESTAMP)`),
   updateAt: text("updated_at").$onUpdate(() => sql`(CURRENT_TIMESTAMP)`),
   accountId: text("account_id")

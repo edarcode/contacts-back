@@ -5,6 +5,8 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { EdarErr } from "../../../errors/EdarErr";
 import { JWT } from "../../../config/jwt";
+import { UUID } from "crypto";
+import { Role } from "../../../db/schemas";
 
 export const loginService = async (login: Login) => {
   const account = await db.query.accounts.findFirst({
@@ -32,3 +34,10 @@ export const loginService = async (login: Login) => {
 };
 
 type Login = z.infer<typeof loginSchema>;
+
+export type TokenPayload = {
+  id: UUID;
+  name: string;
+  role: Role;
+  img: string;
+};
