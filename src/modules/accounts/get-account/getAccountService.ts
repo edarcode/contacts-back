@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { count, eq } from "drizzle-orm";
 import { db } from "../../../db/db";
 import { UUID } from "crypto";
 import { EdarErr } from "../../../errors/EdarErr";
@@ -13,11 +13,12 @@ export const getAccountService = async (id: UUID) => {
       role: accounts.role,
       img: accounts.img,
       createdAt: accounts.createdAt,
-      contacts: contacts,
+      contactCount: count(contacts.id),
     })
     .from(accounts)
     .leftJoin(contacts, eq(accounts.id, contacts.accountId))
-    .where(eq(accounts.id, id));
+    .where(eq(accounts.id, id))
+    .limit(1);
 
   if (!account) throw new EdarErr({ status: 404, msg: "Cuenta no encontrada" });
 
