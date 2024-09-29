@@ -20,7 +20,8 @@ export const getAccountService = async (id: UUID) => {
     .where(eq(accounts.id, id))
     .limit(1);
 
-  if (!account) throw new EdarErr({ status: 404, msg: "Cuenta no encontrada" });
+  if (!account || !account.id)
+    throw new EdarErr({ status: 404, msg: "Cuenta no encontrada" });
 
   return account;
 };
