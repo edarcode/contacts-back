@@ -32,10 +32,10 @@ const seed = async () => {
   await db.insert(accounts).values([EDAR, LORE, MYKE]);
 
   await db.insert(contacts).values([
-    { name: "lore", tell: "+57 302", accountId: EDAR.id },
-    { name: "myke", tell: "+57 304", accountId: EDAR.id },
-    { name: "edar", tell: "+57 303", accountId: LORE.id },
-    { name: "edar", tell: "+57 303", accountId: MYKE.id },
+    { name: "lore", tell: "+57 3022", accountId: EDAR.id },
+    { name: "myke", tell: "+57 3021", accountId: EDAR.id },
+    { name: "edar", tell: "+57 3033", accountId: LORE.id },
+    { name: "edar", tell: "+57 3033", accountId: MYKE.id },
   ]);
 };
 

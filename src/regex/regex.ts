@@ -6,4 +6,5 @@ export const REGEX = {
   mayus: /[A-Z]/,
   minus: /[a-z]/,
   space: /\s/,
+  tell: /^\+\d{1,3}\s\d{4,14}$/,
 };
