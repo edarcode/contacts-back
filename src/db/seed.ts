@@ -6,8 +6,8 @@ import { db } from "./db";
 
 const EDAR = {
   id: crypto.randomUUID(),
-  email: process.env.ADMIN_EMAIL as string,
-  password: process.env.ADMIN_PASSWORD as string,
+  email: process.env.ADMIN_EMAIL!,
+  password: process.env.ADMIN_PASSWORD!,
   role: Role.admin,
 };
 
@@ -34,8 +34,13 @@ const seed = async () => {
   await db.insert(contacts).values([
     { name: "lore", tell: "+57 3022", accountId: EDAR.id },
     { name: "myke", tell: "+57 3021", accountId: EDAR.id },
+    { name: "pello", tell: "+57 3023", accountId: EDAR.id },
     { name: "edar", tell: "+57 3033", accountId: LORE.id },
+    { name: "zoila", tell: "+57 3039", accountId: LORE.id },
+    { name: "el muo", tell: "+57 3040", accountId: LORE.id },
     { name: "edar", tell: "+57 3033", accountId: MYKE.id },
+    { name: "juan", tell: "+57 3034", accountId: MYKE.id },
+    { name: "pedro", tell: "+57 3035", accountId: MYKE.id },
   ]);
 };
 
