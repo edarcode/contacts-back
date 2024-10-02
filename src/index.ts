@@ -4,4 +4,12 @@ import server from "./server/server";
 
 // server-up
 
-server.listen(PORT, () => console.log(SERVER_ON));
+server.listen(PORT, () => {
+  console.log(SERVER_ON);
+  setInterval(ping, 5 * 60 * 1000);
+});
+
+const ping = async () => {
+  await fetch(process.env.API_BASE_URL!);
+  console.log("pong");
+};
