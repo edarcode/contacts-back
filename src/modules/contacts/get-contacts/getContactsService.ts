@@ -12,7 +12,7 @@ export const getContactsService = async (
 ) => {
   if (filters.page && filters.page <= 0) throw new EdarErr(ERR_MSG);
 
-  const { page = 1, limit = 1, name, tell } = filters;
+  const { page = 1, limit = 6, name, tell } = filters;
   const offset = (page - 1) * limit;
 
   const conditions = [
