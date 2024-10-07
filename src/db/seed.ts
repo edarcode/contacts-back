@@ -44,10 +44,7 @@ const seed = async () => {
       img: "https://randomuser.me/api/portraits/men/41.jpg",
       accountId: EDAR.id,
     },
-    { name: "camila", tell: "+57 3123456789", accountId: EDAR.id },
-    { name: "diego", tell: "+57 3176543210", accountId: EDAR.id },
-    { name: "sofía", tell: "+57 3009876543", accountId: EDAR.id },
-    { name: "felipe", tell: "+57 3141234567", accountId: EDAR.id },
+
     {
       name: "camila",
       tell: "+57 3123456789",
@@ -108,6 +105,10 @@ const seed = async () => {
       img: "https://randomuser.me/api/portraits/men/11.jpg",
       accountId: EDAR.id,
     },
+    { name: "camila", tell: "+57 3123456789", accountId: EDAR.id },
+    { name: "diego", tell: "+57 3176543210", accountId: EDAR.id },
+    { name: "sofía", tell: "+57 3009876543", accountId: EDAR.id },
+    { name: "felipe", tell: "+57 3141234567", accountId: EDAR.id },
 
     { name: "edar", tell: "+57 3033", accountId: LORE.id },
     { name: "zoila", tell: "+57 3039", accountId: LORE.id },

@@ -9,7 +9,7 @@ import { paramsWithIdSchema } from "../../../zod-schemas/paramsWithIdSchema";
 export const updateContactRouter = Router();
 
 updateContactRouter.patch(
-  ":id",
+  "/:id",
   [
     verifyToken,
     verifyBody(updateContactSchema),
