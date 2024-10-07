@@ -32,35 +32,86 @@ const seed = async () => {
   await db.insert(accounts).values([EDAR, LORE, MYKE]);
 
   await db.insert(contacts).values([
-    { name: "ana", tell: "+57 3028389987", accountId: EDAR.id },
-    { name: "luis", tell: "+57 3107654321", accountId: EDAR.id },
+    {
+      name: "ana",
+      tell: "+57 3028389987",
+      img: "https://randomuser.me/api/portraits/women/3.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "luis",
+      tell: "+57 3107654321",
+      img: "https://randomuser.me/api/portraits/men/41.jpg",
+      accountId: EDAR.id,
+    },
     { name: "camila", tell: "+57 3123456789", accountId: EDAR.id },
     { name: "diego", tell: "+57 3176543210", accountId: EDAR.id },
     { name: "sofía", tell: "+57 3009876543", accountId: EDAR.id },
     { name: "felipe", tell: "+57 3141234567", accountId: EDAR.id },
-    { name: "isabella", tell: "+57 3132468975", accountId: EDAR.id },
-    { name: "julián", tell: "+57 3155678901", accountId: EDAR.id },
-    { name: "martina", tell: "+57 3198765432", accountId: EDAR.id },
-    { name: "mateo", tell: "+57 3187654321", accountId: EDAR.id },
-    { name: "valentina", tell: "+57 3012345678", accountId: EDAR.id },
-    { name: "andrés", tell: "+57 3203456789", accountId: EDAR.id },
-    { name: "lucía", tell: "+57 3023456789", accountId: EDAR.id },
-    { name: "nicolás", tell: "+57 3112345678", accountId: EDAR.id },
-    { name: "gabriela", tell: "+57 3089876543", accountId: EDAR.id },
-    { name: "juan", tell: "+57 3065432198", accountId: EDAR.id },
-    { name: "camilo", tell: "+57 3045678901", accountId: EDAR.id },
-    { name: "renata", tell: "+57 3156789012", accountId: EDAR.id },
-    { name: "sebastián", tell: "+57 3198765432", accountId: EDAR.id },
-    { name: "emilia", tell: "+57 3034567890", accountId: EDAR.id },
-    { name: "cristian", tell: "+57 3076543210", accountId: EDAR.id },
+    {
+      name: "camila",
+      tell: "+57 3123456789",
+      img: "https://randomuser.me/api/portraits/women/2.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "andres",
+      tell: "+57 3012345678",
+      img: "https://randomuser.me/api/portraits/men/3.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "sofia",
+      tell: "+57 3156789012",
+      img: "https://randomuser.me/api/portraits/women/4.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "carlos",
+      tell: "+57 3109876543",
+      img: "https://randomuser.me/api/portraits/men/5.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "maria",
+      tell: "+57 3187654321",
+      img: "https://randomuser.me/api/portraits/women/6.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "juan",
+      tell: "+57 3201234567",
+      img: "https://randomuser.me/api/portraits/men/7.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "valentina",
+      tell: "+57 3176543210",
+      img: "https://randomuser.me/api/portraits/women/8.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "sebastian",
+      tell: "+57 3009876543",
+      img: "https://randomuser.me/api/portraits/men/9.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "laura",
+      tell: "+57 3198765432",
+      img: "https://randomuser.me/api/portraits/women/10.jpg",
+      accountId: EDAR.id,
+    },
+    {
+      name: "alejandro",
+      tell: "+57 3045678901",
+      img: "https://randomuser.me/api/portraits/men/11.jpg",
+      accountId: EDAR.id,
+    },
 
     { name: "edar", tell: "+57 3033", accountId: LORE.id },
     { name: "zoila", tell: "+57 3039", accountId: LORE.id },
     { name: "el muo", tell: "+57 3040", accountId: LORE.id },
-
-    { name: "edar", tell: "+57 3033", accountId: MYKE.id },
-    { name: "juan", tell: "+57 3034", accountId: MYKE.id },
-    { name: "pedro", tell: "+57 3035", accountId: MYKE.id },
   ]);
 };
 
