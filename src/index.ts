@@ -6,7 +6,7 @@ import server from "./server/server";
 
 server.listen(PORT, () => {
   console.log(SERVER_ON);
-  setInterval(ping, 14 * 60 * 1000);
+  // setInterval(ping, 14 * 60 * 1000);
 });
 
 const ping = async () => {
